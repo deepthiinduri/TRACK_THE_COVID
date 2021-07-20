@@ -89,7 +89,7 @@ def state_wise_info():
     canvas_6 = canvas1.create_window(550, 200, window = lbl_output)
     canvas2 = Canvas(newWindow, height = 500 , width = 1550)
     canvas2.pack(side = BOTTOM)
-    render = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/indiamap2.jpg").resize((700,475) , Image.ANTIALIAS))
+    render = ImageTk.PhotoImage(Image.open ("Images/indiamap2.jpg").resize((700,475) , Image.ANTIALIAS))
     img = Label(canvas2, image = render, padx = 100)
     img.image = render
     img.pack()
