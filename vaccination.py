@@ -31,7 +31,7 @@ def covid_vaccination():
     newWindow = Toplevel()
     newWindow.title("COVID VACCINATION")
     newWindow.state('zoomed')
-    newWindow.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
+    newWindow.iconbitmap(r'Images\coronavirus_image_UXL_icon.ico')
     labe1 = Label(newWindow, text = " VACCINATION " , font = "Times 25 bold roman" , pady = 5, padx = 1550 ,fg = "#EC4D37", bg = "black").pack()
     path = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'
     df = pd.read_csv(path)
@@ -43,7 +43,7 @@ def covid_vaccination():
         newWindow2 = Toplevel(newWindow)
         newWindow2.title("VACCINATION AVAILABILITY")
         newWindow2.state('zoomed')
-        newWindow2.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
+        newWindow2.iconbitmap(r'Images\coronavirus_image_UXL_icon.ico')
         labe1 = Label(newWindow2, text = " VACCINATION AVAILABILITY CHECK IN INDIA " , font = "Times 25 bold roman" , pady = 5, padx = 1550 ,fg = "#EC4D37", bg = "black").pack()
         labe2 = Label(newWindow2, text = " ",font = "Times 7 normal roman").pack()
         labe3 = Label(newWindow2, text = " Search with pincode, vaccination center details. ",font = "Times 15 bold roman", padx = 1550 , bg = "gold").pack()
@@ -251,13 +251,13 @@ def covid_vaccination():
     canvas1.config(width = 1550,height = 1000)
     canvas1.config(xscrollcommand = hbar.set, yscrollcommand = vbar.set)
     canvas1.pack(side = LEFT,expand = True,fill = BOTH)
-    render1 = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/Corona-vaccine3.png").resize((400,400) , Image.ANTIALIAS))
+    render1 = ImageTk.PhotoImage(Image.open ("Images/Corona-vaccine3.png").resize((400,400) , Image.ANTIALIAS))
     img1 = Label(canvas1, image = render1, padx = 100)
     img1.image = render1
     canvas1.create_window(58,58, window = img1)
     labe1 = Label(canvas1, text = " COVID-19 vaccines " , font = "Times 26 bold roman" , pady = 5 ,fg = "white", bg = "#008DC9")
     canvas1.create_window(460,30, window = labe1)
-    render2 = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/vaccine.jpg").resize((700,650) , Image.ANTIALIAS))
+    render2 = ImageTk.PhotoImage(Image.open ("Images/vaccine.jpg").resize((700,650) , Image.ANTIALIAS))
     img2 = Label(canvas1, image = render2, padx = 100)
     img2.image = render2
     canvas1.create_window(1150,300, window = img2)
