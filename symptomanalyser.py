@@ -12,7 +12,7 @@ def Syptom_analyser():
     newWindow.state('zoomed')
     newWindow.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
     labe1 = Label(newWindow, text = " SYMPTOM ANALYSER " , font = "Times 25 bold roman" , pady = 5, padx = 1550 ,fg = "#EC4D37", bg = "black").pack()
-    render = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Documents/symptoms covid.png").resize((1550,180) , Image.ANTIALIAS))
+    render = ImageTk.PhotoImage(Image.open ("Images/symptoms covid.png").resize((1550,180) , Image.ANTIALIAS))
     img = Label(newWindow, image = render, padx = 100)
     img.image = render
     img.pack()
