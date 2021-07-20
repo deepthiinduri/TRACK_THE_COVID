@@ -18,7 +18,7 @@ def notif_and_helplines():
     newWindow = Toplevel()
     newWindow.title("NOTIFICATIONS, HELPLINES AND ADVISORIES")
     newWindow.state('zoomed')
-    newWindow.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
+    newWindow.iconbitmap(r'Images\coronavirus_image_UXL_icon.ico')
 
     def shift():
         x1,y1,x2,y2 = canvas.bbox("marquee")
@@ -88,7 +88,7 @@ def notif_and_helplines():
         webbrowser.open_new(info_div1[5].find("a").get('href'))
     def Button_7_open():
         webbrowser.open_new(info_div2.find("a").get('href'))
-    render = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/coronavirus3.png").resize((300,40) , Image.ANTIALIAS))
+    render = ImageTk.PhotoImage(Image.open ("Images/coronavirus3.png").resize((300,40) , Image.ANTIALIAS))
     covid_img = Label(canvas1)
     covid_img.image = render
     canvas1.create_image(180, 45,image = render)
@@ -120,7 +120,7 @@ def notif_and_helplines():
     lbl = Label(canvas1, text = r"www.mohfw.gov.in", fg = "blue" , cursor = "hand2",font = "Times 13 bold roman")
     canvas_lbl = canvas1.create_window(280, 970, window = lbl)
     lbl.bind("<Button-1>", call_back)
-    render2 = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/vaccination.png").resize((570,550) , Image.ANTIALIAS))
+    render2 = ImageTk.PhotoImage(Image.open ("Images/vaccination.png").resize((570,550) , Image.ANTIALIAS))
     img2 = Label(frame, image = render2)
     img2.image = render2
     img2.pack(side = RIGHT)
