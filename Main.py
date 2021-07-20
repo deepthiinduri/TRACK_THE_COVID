@@ -28,7 +28,7 @@ def refresh():
 
 base = Tk()
 base.title('TRACK THE COVID')
-base.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
+base.iconbitmap(r'Images\coronavirus_image_UXL_icon.ico')
 base.geometry("1550x1000")
 f = ("Times", "24", "bold italic")
 img = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/Coronavirus image.jpg"). resize((300, 250), Image. ANTIALIAS))
