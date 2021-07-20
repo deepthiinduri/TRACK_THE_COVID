@@ -35,7 +35,7 @@ def country_wise_info():
     newWindow = Toplevel()
     newWindow.title("COUNTRY WISE TRACKER")
     newWindow.state('zoomed')
-    newWindow.iconbitmap(r'C:\Users\DELL\Downloads\coronavirus_image_UXL_icon.ico')
+    newWindow.iconbitmap(r'Images\coronavirus_image_UXL_icon.ico')
     
     def get_country_info():
         url = 'https://api.covid19api.com/summary'
@@ -70,7 +70,7 @@ def country_wise_info():
         
         covid2.update(covid2['TotalConfirmed'].map('Total Confirmed:{}'.format))
         covid2.update(covid2['TotalRecovered'].map('Total Recovered:{}'.format))
-        coordinates = pd.read_csv('C:/Users/DELL/Documents/Folder1/countries-csv.csv')
+        coordinates = pd.read_csv('countries-csv.csv')
         covid_final= pd.merge(covid2,coordinates,on='Country')
 
         def plotDot(point):
@@ -98,7 +98,7 @@ def country_wise_info():
         
         covid2.update(covid2['TotalConfirmed'].map('Total Confirmed:{}'.format))
         covid2.update(covid2['TotalRecovered'].map('Total Recovered:{}'.format))
-        coordinates = pd.read_csv('C:/Users/DELL/Documents/Folder1/countries-csv.csv')
+        coordinates = pd.read_csv('countries-csv.csv')
         covid_final= pd.merge(covid2,coordinates,on='Country')
         m1 = folium.Map(tiles = 'StamenToner', min_zoom = 2)
         deaths = covid_final['TotalDeaths'].astype(float)
@@ -178,7 +178,7 @@ def country_wise_info():
 
     canvas2 = Canvas(newWindow, height = 500 , width = 1550)
     canvas2.pack(side = BOTTOM)
-    render1 = ImageTk.PhotoImage(Image.open ("C:/Users/DELL/Downloads/worldmap.png").resize((1550,480) , Image.ANTIALIAS))
+    render1 = ImageTk.PhotoImage(Image.open ("Images/worldmap.png").resize((1550,480) , Image.ANTIALIAS))
     img1 = Label(canvas2, image = render1)
     img1.image = render1
     img1.pack(side = BOTTOM)
