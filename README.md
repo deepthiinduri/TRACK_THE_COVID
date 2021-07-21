@@ -75,7 +75,7 @@ from symptomanalyser import Syptom_analyser
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
-### State wise (India) ###
+### State Wise (India) ###
 
 #### Importing covid and covid_india modules
 
@@ -92,9 +92,50 @@ from covid_india import states
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
 
+#### State wise graph
 
+```python
 
-<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise%20Graph.png" width="500"/> <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" width="500"/> 
+def get_state_info_graph():
+        df1 = df
+        df1['active'] = df1['active'].apply(lambda x : int(x))
+        df1['deaths'] = df1['deaths'].apply(lambda x : int(x))
+        df1['confirmed'] = df1['confirmed'].apply(lambda x : int(x))
+        df1['recovered'] = df1['recovered'].apply(lambda x : int(x))
+        states = df1['state']
+        fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df1['confirmed']),go.Bar(name = 'active', x = states, y = df1['active']),go.Bar(name = 'recovered', x = states, y = df1['recovered'])])
+        fig.update_layout(barmode = 'group')
+        fig.show()
+
+```
+#### District wise graph
+
+```python
+
+def district_wise():
+        url = 'https://api.covid19india.org/state_district_wise.json'
+        jsn = requests.get(url).json()
+        searchstate = txt.get()
+        district = jsn[searchstate]
+        df = pd.DataFrame(district)
+        for key in district['districtData']:
+            district['districtData'][key].pop('notes', None)
+            district['districtData'][key].pop('migratedother', None)
+            district['districtData'][key].pop('delta', None)
+        keys = district['districtData'].keys()
+        df = pd.DataFrame.from_dict(district['districtData'], orient = 'index').reset_index(drop=True)
+        df['Names'] = keys
+        df = df.drop(df.index[0])
+        df['active'] = df['active'].apply(lambda x : int(x))
+        df['deceased'] = df['deceased'].apply(lambda x : int(x))
+        df['confirmed'] = df['confirmed'].apply(lambda x : int(x))
+        df['recovered'] = df['recovered'].apply(lambda x : int(x))
+        states = df['Names']
+        fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df['confirmed']),go.Bar(name = 'active', x = states, y = df['active']),go.Bar(name = 'recovered', x = states, y = df['recovered']),go.Bar(name = 'deceased', x = states, y = df['deceased'])])
+        fig.update_layout(barmode = 'group')
+        fig.show()
+
+```
 
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise%20Graph.png" width="45%">
