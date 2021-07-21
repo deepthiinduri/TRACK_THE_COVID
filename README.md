@@ -32,6 +32,7 @@ In the Home Page the Tracker shows the number of Active, Deaths, Discharged case
 ##### Importing Modules
 
 ```python
+
 from tkinter import *
 import requests
 import bs4
@@ -39,14 +40,16 @@ from bs4 import BeautifulSoup
 import json
 import time
 import datetime
+import webbrowser
 import datetime as dt
 from PIL import ImageTk, Image ,ImageDraw, ImageFont, ImageFilter
-import webbrowser
+
 ```
 
 # Calling functions defined in other Python files. 
 
 ```python
+
 from Indiacases import get_corona_detail_of_india
 from statewise import state_wise_info
 from countrywise import country_wise_info
@@ -54,6 +57,7 @@ from healthinfo import covid_symptoms, covid_precautions, covid_treatments
 from vaccination import covid_vaccination
 from notifandhelpline import notif_and_helplines
 from symptomanalyser import Syptom_analyser
+
 ```
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
