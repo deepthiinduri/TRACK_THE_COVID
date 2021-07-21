@@ -16,6 +16,9 @@
   - [Home Page](#-home-page)
     - [Importing Modules](#importing-modules)
     - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
+    - [Main.py]()
+    - [Requesting Web Page and Pulling data](#make-a-request-to-a-web-page-and-pulling-data-out-of-file-using-requests-and-beautifulsoup-modules)
+    - [Indiacases.py]()
   - [State Wise](#state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
     - [State Wise Graph](#state-wise-graph)
@@ -77,7 +80,7 @@ from symptomanalyser import Syptom_analyser
 
 ```
 
-Main code - [Main.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Main.py)
+##### Main code - [Main.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Main.py)
 
 #### Make a request to a web page, and pulling data out of file using requests and Beautifulsoup modules:
 
@@ -89,7 +92,7 @@ bs = bs4.BeautifulSoup(html_data.text,'html.parser')
 
 ```
 
-Code - [Indiacases.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Indiacases.py)
+##### Code - [Indiacases.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Indiacases.py)
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
@@ -205,7 +208,7 @@ def top10_confirmed_states():
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Active%20Cases%20States.png" width="45%">
 </p>
 
-Statewise Code - [StateWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/statewise.py)
+##### Statewise Code - [StateWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/statewise.py)
 
 
 ### Country Wise
