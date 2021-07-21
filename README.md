@@ -27,7 +27,9 @@ ___
 
 #### 🏡 Home Page ####
 
-COVID Tracker shows the number of active, confirmed, recovered cases and deaths from novel state-wise in India.
+In the Home Page the Tracker shows the number of Active, Deaths, Discharged cases from novel coronavirus and Vaccinations in India also with a Refresh and Exit button.
+
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
 
