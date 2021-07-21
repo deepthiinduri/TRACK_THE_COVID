@@ -1,10 +1,12 @@
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/TRACK%20THE%20COVID%20LOGO.png">
 
-> **This Tracker Application helps in tracking and breaking chains of transmission of COVID-19. It uses maps and graphs to analyze the global distribution of covid-19.**
+> **TRACK THE COVID Application helps in tracking and breaking chains of transmission of COVID-19. It uses maps and graphs to analyze the global distribution of covid-19.**
 > 
 > **This tracker is designed to inform people regarding risks, best practices and relevant advisories related to coronavirus.**
 > 
-> **It also helps to check the availability of vaccination centers in your area (India).**
+> **It helps to check the availability of vaccination centers in your area (India) and also shows Helplines, Regional Contacts and fetch covid-19 related news.**
+> 
+> **It also has a feature of a Symptom Analyser in which it calculates the probability of an individual getting infected by covid-19.**
 
 
 ## Table of Contents
@@ -18,6 +20,7 @@
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
     - [State Wise Graph](#state-wise-graph)
     - [District Wise Graph](#district-wise-graph)
+    - [Top 10 Cases States](#top-10-cases-states)
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
 
