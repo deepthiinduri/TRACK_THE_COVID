@@ -25,7 +25,7 @@ ___
 
 ### About our project ###
 
-#### Home Page ####
+#### :star2: Home Page ####
 
 COVID Tracker shows the number of active, confirmed, recovered cases and deaths from novel state-wise in India.
 
