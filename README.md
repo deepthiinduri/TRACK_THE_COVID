@@ -7,7 +7,7 @@
 > 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
-### Prerequisites ###
+## Prerequisites ##
 
 Inorder to get this project working on system. We need to install the following:
 1. Python 3 - 64 Bit
@@ -23,13 +23,13 @@ Inorder to get this project working on system. We need to install the following:
 
 ___
 
-### About our project ###
+## About our project ##
 
-#### 🏡 Home Page ####
+### 🏡 Home Page ###
 
 In the Home Page the Tracker shows the number of Active, Deaths, Discharged cases from novel coronavirus and Vaccinations in India with Refresh and Exit buttons.
 
-##### Importing Modules
+#### Importing Modules
 
 ```python
 
@@ -46,7 +46,7 @@ from PIL import ImageTk, Image ,ImageDraw, ImageFont, ImageFilter
 
 ```
 
-# Calling functions defined in other Python files. 
+#### Calling functions defined in other Python files. 
 
 ```python
 
