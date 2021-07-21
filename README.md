@@ -3,6 +3,8 @@
 
 > **This Tracker Application helps in tracking and breaking chains of transmission of COVID-19.**
 > 
+> **It tracks the global spread of covid-19 with maps and graphs.**
+> 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
 
