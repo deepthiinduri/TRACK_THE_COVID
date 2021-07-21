@@ -77,6 +77,8 @@ from symptomanalyser import Syptom_analyser
 
 ```
 
+Main code - [Main.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Main.py)
+
 #### Make a request to a web page, and pulling data out of file using requests and Beautifulsoup modules:
 
 ```python
@@ -86,6 +88,8 @@ html_data = requests.get(url)
 bs = bs4.BeautifulSoup(html_data.text,'html.parser')
 
 ```
+
+Code - [Indiacases.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Indiacases.py)
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
@@ -105,13 +109,14 @@ from covid_india import states
 > 
 > ***covid_india*** - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
 
+The requests Python module retrieves JSON data and decode it, due to it's builtin JSON decoder and Convert the dictionary data into DataFrame using pandas.
+
 ```python
 
 url = 'https://api.covid19india.org/data.json'
 jsn = requests.get(url).json()
 statewise = jsn['statewise']
 df = pd.DataFrame(statewise)
-df = df.drop(df.index[0])
     
 ```
 
@@ -199,6 +204,8 @@ def top10_confirmed_states():
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Active%20Cases%20States.png" width="45%">
 </p>
+
+Statewise Code - [StateWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/statewise.py)
 
 
 ### Country Wise
