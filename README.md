@@ -72,6 +72,16 @@ from symptomanalyser import Syptom_analyser
 
 ```
 
+#### Make a request to a web page, and pulling data out of file using requests and Beautifulsoup modules:
+
+```python
+
+url = "https://www.mohfw.gov.in/"
+html_data = requests.get(url)
+bs = bs4.BeautifulSoup(html_data.text,'html.parser')
+
+```
+
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
