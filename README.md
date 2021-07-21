@@ -42,6 +42,11 @@ import datetime
 import datetime as dt
 from PIL import ImageTk, Image ,ImageDraw, ImageFont, ImageFilter
 import webbrowser
+```
+
+# Calling functions defined in other Python files. 
+
+```python
 from Indiacases import get_corona_detail_of_india
 from statewise import state_wise_info
 from countrywise import country_wise_info
