@@ -11,22 +11,12 @@
 
 - [Prerequisites](#prerequisites)
 - [About the project](#about-the-project)
-  - [Home](#home-page)
+  - [Home Page](#-home-page)
     - [Importing Modules](#importing-modules)
-  - [State Wise](#state-wise)
-  - [Using Webpack](#using-webpack)
-  - [Using Parcel](#using-parcel)
-  - [Using Typescript](#using-typescript)
-- [Documentation](#documentation)
-- [Badge](#badge)
-- [Contributing](#contributing)
-  - [Code of Conduct](#code-of-conduct)
-  - [Contributing Guide](#contributing-guide)
-  - [Good First Issues](#good-first-issues)
-- [Credits](#credits)
-  - [Backers](#backers)
-  - [Sponsors](#sponsors)
-- [License](#license)
+    - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
+  - [State Wise](#state-wise-india)
+    - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
+    - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
 
 
 ## Prerequisites
@@ -91,16 +81,18 @@ from symptomanalyser import Syptom_analyser
 
 ```python
 
-import imageio
 from covid import Covid
 from covid_india import states
-from PIL import ImageTk
-import plotly.express as px
-import plotly.graph_objects as go
 
 ```
 #### covid and covid_india modules:
 > ***covid*** - Python package to get information regarding the novel corona virus provided by Johns Hopkins university and worldometers.info
+> 
 > ***covid_india*** - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
+
+<p float = "left">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise%20Graph.png" >
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" > 
+</p>
