@@ -12,12 +12,13 @@
 Inorder to get this project working on system. We need to install the following:
 1. Python 3 - 64 Bit
 2. Visual Studio - June 2021 (version 1.58)
-3. Modules:
-* tkinter
+3. Web Browser - Mozilla Firefox (or) Google Chrome (or) Microsoft Edge (or) Internet Explorer
+4. Modules:
+* tkinter, tkinter.ttk
 * bs4, requests, webbrowser
 * numpy, seaborn, pandas, folium, matplotlib, tabulate
-* PIL, threading, urllib, plyer
-* covid, pycountry
+* PIL, threading, urllib, plyer, prettytable
+* covid, covid_india, pycountry
 
 
 
