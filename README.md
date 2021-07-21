@@ -116,20 +116,20 @@ df = df.drop(df.index[0])
 
 #### State wise graph
 
-All the plotly graphs are all displayed in the default web browser.
+All the plotly graphs are displayed in the default web browser.
 
 ```python
 
 def get_state_info_graph():
-        df1 = df
-        df1['active'] = df1['active'].apply(lambda x : int(x))
-        df1['deaths'] = df1['deaths'].apply(lambda x : int(x))
-        df1['confirmed'] = df1['confirmed'].apply(lambda x : int(x))
-        df1['recovered'] = df1['recovered'].apply(lambda x : int(x))
-        states = df1['state']
-        fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df1['confirmed']),go.Bar(name = 'active', x = states, y = df1['active']),go.Bar(name = 'recovered', x = states, y = df1['recovered'])])
-        fig.update_layout(barmode = 'group')
-        fig.show()
+    df1 = df
+    df1['active'] = df1['active'].apply(lambda x : int(x))
+    df1['deaths'] = df1['deaths'].apply(lambda x : int(x))
+    df1['confirmed'] = df1['confirmed'].apply(lambda x : int(x))
+    df1['recovered'] = df1['recovered'].apply(lambda x : int(x))
+    states = df1['state']
+    fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df1['confirmed']),go.Bar(name = 'active', x = states, y = df1['active']),go.Bar(name = 'recovered', x = states, y = df1['recovered'])])
+    fig.update_layout(barmode = 'group')
+    fig.show()
 
 ```
 #### District wise graph
@@ -137,27 +137,27 @@ def get_state_info_graph():
 ```python
 
 def district_wise():
-        url = 'https://api.covid19india.org/state_district_wise.json'
-        jsn = requests.get(url).json()
-        searchstate = txt.get()
-        district = jsn[searchstate]
-        df = pd.DataFrame(district)
-        for key in district['districtData']:
-            district['districtData'][key].pop('notes', None)
-            district['districtData'][key].pop('migratedother', None)
-            district['districtData'][key].pop('delta', None)
-        keys = district['districtData'].keys()
-        df = pd.DataFrame.from_dict(district['districtData'], orient = 'index').reset_index(drop=True)
-        df['Names'] = keys
-        df = df.drop(df.index[0])
-        df['active'] = df['active'].apply(lambda x : int(x))
-        df['deceased'] = df['deceased'].apply(lambda x : int(x))
-        df['confirmed'] = df['confirmed'].apply(lambda x : int(x))
-        df['recovered'] = df['recovered'].apply(lambda x : int(x))
-        states = df['Names']
-        fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df['confirmed']),go.Bar(name = 'active', x = states, y = df['active']),go.Bar(name = 'recovered', x = states, y = df['recovered']),go.Bar(name = 'deceased', x = states, y = df['deceased'])])
-        fig.update_layout(barmode = 'group')
-        fig.show()
+    url = 'https://api.covid19india.org/state_district_wise.json'
+    jsn = requests.get(url).json()
+    searchstate = txt.get()
+    district = jsn[searchstate]
+    df = pd.DataFrame(district)
+    for key in district['districtData']:
+        district['districtData'][key].pop('notes', None)
+        district['districtData'][key].pop('migratedother', None)
+        district['districtData'][key].pop('delta', None)
+    keys = district['districtData'].keys()
+    df = pd.DataFrame.from_dict(district['districtData'], orient = 'index').reset_index(drop=True)
+    df['Names'] = keys
+    df = df.drop(df.index[0])
+    df['active'] = df['active'].apply(lambda x : int(x))
+    df['deceased'] = df['deceased'].apply(lambda x : int(x))
+    df['confirmed'] = df['confirmed'].apply(lambda x : int(x))
+    df['recovered'] = df['recovered'].apply(lambda x : int(x))
+    states = df['Names']
+    fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df['confirmed']),go.Bar(name = 'active', x = states, y = df['active']),go.Bar(name = 'recovered', x = states, y = df['recovered']),go.Bar(name = 'deceased', x = states, y = df['deceased'])])
+    fig.update_layout(barmode = 'group')
+    fig.show()
 
 ```
 
@@ -167,7 +167,19 @@ def district_wise():
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" width="45%">
 </p>
 
-#### Top 10 Cases Graphs
+#### Top 10 Cases States
+
+Code for Top 10 Confirmed States
+
+def top10_confirmed_states():
+    df2 = df
+    df2['confirmed'] = df2['confirmed'].apply(lambda x : int(x))
+    df2 = df2.sort_values(by = ['confirmed'], ascending = False).head(10)
+    states = df2['state']
+    fig = go.Figure(data = [go.Bar(name = 'confirmed', x = states, y = df2['confirmed'])])
+    fig.update_traces(marker_color = 'rgb(158,202,225)', marker_line_color = 'rgb(8,48,107)',marker_line_width = 1.5, opacity = 0.6)
+    fig.update_layout(barmode = 'group',title = "Top-10 Confirmed Cases States")
+    fig.show()
 
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20States.png" width="45%">
