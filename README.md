@@ -5,6 +5,8 @@
 > 
 > **It tracks the global spread of covid-19 with maps and graphs.**
 > 
+> **This tracker is designed to inform people regarding risks, best practices and relevant advisories related to coronavirus.**
+> 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
 
