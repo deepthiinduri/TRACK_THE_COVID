@@ -27,6 +27,7 @@
     - [StateWise.py](#statewise-code---statewisepy)
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
+    - [World Cases Total and Active Cases](#world-cases-maps)
 
 ## Prerequisites
 
