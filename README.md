@@ -1,5 +1,4 @@
-<img width="30"  src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/Images/coronavirus_image_UXL_icon.ico">  **_TRACK THE COVID_**
-======
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/TRACK%20THE%20COVID.png">
 
 > **This Tracker Application helps in tracking and breaking chains of transmission of COVID-19. It uses maps and graphs to analyze the global distribution of covid-19.**
 > 
@@ -69,13 +68,16 @@ from symptomanalyser import Syptom_analyser
 
 ```python
 
+import imageio
 from covid import Covid
 from covid_india import states
+from PIL import ImageTk
+import plotly.express as px
+import plotly.graph_objects as go
 
 ```
-
-***covid and covid_india modules:-***
-> covid - Python package to get information regarding the novel corona virus provided by Johns Hopkins university and worldometers.info
-> covid_india - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
+#### covid and covid_india modules:
+> ***covid*** - Python package to get information regarding the novel corona virus provided by Johns Hopkins university and worldometers.info
+> ***covid_india*** - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
