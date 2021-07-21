@@ -16,14 +16,15 @@
   - [Home Page](#-home-page)
     - [Importing Modules](#importing-modules)
     - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
-    - [Main.py]()
+    - [Main.py](#main-code---mainpy)
     - [Requesting Web Page and Pulling data](#make-a-request-to-a-web-page-and-pulling-data-out-of-file-using-requests-and-beautifulsoup-modules)
-    - [Indiacases.py]()
+    - [Indiacases.py](#code---indiacasespy)
   - [State Wise](#state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
     - [State Wise Graph](#state-wise-graph)
     - [District Wise Graph](#district-wise-graph)
     - [Top 10 Cases States](#top-10-cases-states)
+    - [StateWise.py](#statewise-code---statewisepy)
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
 
@@ -227,3 +228,17 @@ from folium.plugins import HeatMap
 ```
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Country%20Wise.png">
+
+#### World Cases (Maps)
+
+<p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/COVID%20MAP%201.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/COVID%20MAP%202.png" width="45%">
+</p>
+
+To create the maps we used folium. Folium makes easy to visualize data in Python on an interactive map. It enables both the binding of data to a map for choropleth visualizations as well as passing HTML visualizations as markers on the map.
+Here to create the map we used two url's. One is to get the latitudes and longitudes to place all the countries and the other is to get the covid-19 data.
+Using folium.CircleMarker method when we give the lat , long , radius ,colour ; circle is created at that specific place.
+The created Folium map is saved as HTML file. This HTML file is opened using webbrowser.open() method.
+
