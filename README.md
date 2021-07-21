@@ -16,7 +16,8 @@
     - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
   - [State Wise](#state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
-    - [Calling functions](#calling-functions-defined-in-other-python-files-to-mainpy)
+    - [State Wise Graph](#state-wise-graph)
+    - [District Wise Graph](#district-wise-graph)
 
 
 ## Prerequisites
@@ -85,7 +86,7 @@ bs = bs4.BeautifulSoup(html_data.text,'html.parser')
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
-### State Wise (India) ###
+### State Wise (India)
 
 #### Importing covid and covid_india modules
 
@@ -152,3 +153,20 @@ def district_wise():
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" width="45%">
 </p>
+
+### Country Wise
+
+#### Importing pycountry and folium modules
+
+```python
+
+import pycountry
+import html5lib
+import plyer
+import urllib.request
+import folium
+from folium.plugins import HeatMap
+
+```
+
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Country%20Wise.png">
