@@ -171,6 +171,9 @@ def district_wise():
 
 Code for Top 10 Confirmed States
 
+
+```python
+
 def top10_confirmed_states():
     df2 = df
     df2['confirmed'] = df2['confirmed'].apply(lambda x : int(x))
@@ -180,6 +183,8 @@ def top10_confirmed_states():
     fig.update_traces(marker_color = 'rgb(158,202,225)', marker_line_color = 'rgb(8,48,107)',marker_line_width = 1.5, opacity = 0.6)
     fig.update_layout(barmode = 'group',title = "Top-10 Confirmed Cases States")
     fig.show()
+
+```
 
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20States.png" width="45%">
