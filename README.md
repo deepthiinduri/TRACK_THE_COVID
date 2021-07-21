@@ -7,8 +7,6 @@
 > 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
-___
-
 ### Prerequisites ###
 
 Inorder to get this project working on system. We need to install the following:
