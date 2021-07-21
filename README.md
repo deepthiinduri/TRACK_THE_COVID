@@ -1,4 +1,4 @@
-<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/TRACK%20THE%20COVID.png">
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/TRACK%20THE%20COVID%20LOGO.png">
 
 > **This Tracker Application helps in tracking and breaking chains of transmission of COVID-19. It uses maps and graphs to analyze the global distribution of covid-19.**
 > 
@@ -6,7 +6,30 @@
 > 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
-## Prerequisites ##
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [About the project](#about-the-project)
+  - [Home](#home-page)
+    - [Importing Modules](#importing-modules)
+  - [State Wise](#state-wise)
+  - [Using Webpack](#using-webpack)
+  - [Using Parcel](#using-parcel)
+  - [Using Typescript](#using-typescript)
+- [Documentation](#documentation)
+- [Badge](#badge)
+- [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
+  - [Contributing Guide](#contributing-guide)
+  - [Good First Issues](#good-first-issues)
+- [Credits](#credits)
+  - [Backers](#backers)
+  - [Sponsors](#sponsors)
+- [License](#license)
+
+
+## Prerequisites
 
 Inorder to get this project working on system. We need to install the following:
 1. Python 3 - 64 Bit
@@ -22,9 +45,9 @@ Inorder to get this project working on system. We need to install the following:
 
 ___
 
-## About our project ##
+## About the project
 
-### 🏡 Home Page ###
+### 🏡 Home Page
 
 In the Home Page the Tracker shows the number of Active, Deaths, Discharged cases from novel coronavirus and Vaccinations in India with Refresh and Exit buttons.
 
