@@ -46,7 +46,7 @@ from PIL import ImageTk, Image ,ImageDraw, ImageFont, ImageFilter
 
 ```
 
-#### Calling functions defined in other Python files. 
+#### Calling functions defined in other Python files to Main.py
 
 ```python
 
@@ -63,6 +63,19 @@ from symptomanalyser import Syptom_analyser
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
+### State wise (India) ###
 
+#### Importing covid and covid_india modules
 
+```python
 
+from covid import Covid
+from covid_india import states
+
+```
+
+***covid and covid_india modules:-***
+> covid - Python package to get information regarding the novel corona virus provided by Johns Hopkins university and worldometers.info
+> covid_india - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
+
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
