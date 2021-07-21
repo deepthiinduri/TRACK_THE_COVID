@@ -237,8 +237,10 @@ from folium.plugins import HeatMap
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/COVID%20MAP%202.png" width="45%">
 </p>
 
-To create the maps we used folium. Folium makes easy to visualize data in Python on an interactive map. It enables both the binding of data to a map for choropleth visualizations as well as passing HTML visualizations as markers on the map.
-Here to create the map we used two url's. One is to get the latitudes and longitudes to place all the countries and the other is to get the covid-19 data.
-Using folium.CircleMarker method when we give the lat , long , radius ,colour ; circle is created at that specific place.
-The created Folium map is saved as HTML file. This HTML file is opened using webbrowser.open() method.
+
+> **To create the maps folium module is used.**
+> **Folium makes easy to visualize data in Python on an interactive map. It enables both the binding of data to a map for choropleth visualizations as well as passing HTML visualizations as markers on the map.**
+> **Here to create the map we used two url's. One is to get the latitudes and longitudes to place all the countries and the other is to get the covid-19 data.**
+> **Using folium.CircleMarker method when we give the lat , long , radius ,colour ; circle is created at that specific place.**
+> **The created Folium map is saved as HTML file. This HTML file is opened using webbrowser.open() method.**
 
