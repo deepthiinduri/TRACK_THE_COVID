@@ -21,6 +21,12 @@ Inorder to get this project working on system. We need to install the following:
 * PIL, threading, urllib, plyer, prettytable
 * covid, covid_india, pycountry
 
+### About our project ###
+
+#### Home Page ####
+
+COVID Tracker shows the number of active, confirmed, recovered cases and deaths from novel state-wise in India.
+
 
 
 
