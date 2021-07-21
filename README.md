@@ -7,6 +7,18 @@
 > 
 > **It also helps to check the availability of vaccination centers in your area (India).**
 
+### Prerequisites ###
+
+Inorder to get this project working on system. We need to install the following:
+1. Python 3 - 64 Bit
+2. Visual Studio - June 2021 (version 1.58)
+3. Modules:
+* tkinter
+* bs4, requests, webbrowser
+* numpy, seaborn, pandas, folium, matplotlib, tabulate
+* PIL, threading, urllib, plyer
+* covid, pycountry
+
 
 
 
