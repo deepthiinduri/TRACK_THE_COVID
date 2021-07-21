@@ -18,7 +18,8 @@
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
     - [State Wise Graph](#state-wise-graph)
     - [District Wise Graph](#district-wise-graph)
-
+  - [Country Wise](#country-wise)
+    - [Importing Modules](#importing-pycountry-and-folium-modules)
 
 ## Prerequisites
 
@@ -101,6 +102,16 @@ from covid_india import states
 > 
 > ***covid_india*** - Python package for providing data for the COVID-19 cases in India. This can provide data both online as well as offline.
 
+```python
+
+url = 'https://api.covid19india.org/data.json'
+jsn = requests.get(url).json()
+statewise = jsn['statewise']
+df = pd.DataFrame(statewise)
+df = df.drop(df.index[0])
+    
+```
+
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
 
 #### State wise graph
@@ -153,6 +164,20 @@ def district_wise():
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" width="45%">
 </p>
+
+#### Top 10 Cases
+
+<p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20States.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Deaths%20Cases%20States.png" width="45%">
+</p>
+<p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20%20Recovered%20Cases%20States.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Active%20Cases%20States.png" width="45%">
+</p>
+
 
 ### Country Wise
 
