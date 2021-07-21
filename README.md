@@ -116,6 +116,8 @@ df = df.drop(df.index[0])
 
 #### State wise graph
 
+All the plotly graphs are all displayed in the default web browser.
+
 ```python
 
 def get_state_info_graph():
@@ -165,7 +167,7 @@ def district_wise():
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/District%20Wise%20Graph.png" width="45%">
 </p>
 
-#### Top 10 Cases
+#### Top 10 Cases Graphs
 
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20States.png" width="45%">
