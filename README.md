@@ -30,7 +30,7 @@
     - [World Cases Visualization Using Folium Maps](#world-cases-maps)
     - [Top 10 Countries Visualization](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
-  - [Health Info](#health-info)
+  - [Health Info](#-health-info)
     - [Symptoms](#)
     - [Precautions](#)
     - [Treatments](#)
