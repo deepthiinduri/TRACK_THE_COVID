@@ -28,6 +28,8 @@
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
     - [World Cases Total and Active Cases](#world-cases-maps)
+    - [Top 10 Cases Countries](#top-10-cases-countries)
+    - [CountryWise.py](#countrywise-code---countrywisepy)
 
 ## Prerequisites
 
@@ -43,7 +45,6 @@ Inorder to get this project working on system. We need to install the following:
 * PIL, threading, urllib, plyer, prettytable
 * covid, covid_india, pycountry
 
-___
 
 ## About the project
 
@@ -184,7 +185,6 @@ def district_wise():
 
 Code for Top 10 Confirmed States
 
-
 ```python
 
 def top10_confirmed_states():
@@ -232,6 +232,40 @@ from folium.plugins import HeatMap
 
 #### World Cases (Maps)
 
+Code to create folium maps
+
+```python
+
+def map_world():
+    conn = http.client.HTTPSConnection("api.covid19api.com")
+    payload = ''
+    headers = {}
+    conn.request("GET", "/summary", payload, headers)
+    res = conn.getresponse()
+    data = res.read().decode('UTF-8')
+    covid1= json.loads(data)
+    pd.json_normalize(covid1['Countries'],sep=",")
+    df = pd.DataFrame(covid1['Countries'])
+    covid2 = df.drop(columns =['CountryCode','Slug','Date','Premium'],axis=1)
+    m = folium.Map(tiles="Stamen Terrain", min_zoom=1.5)
+    url = 'https://raw.githubusercontent.com/python-visualization/folium/master/examples/data'
+    country_shapes = f'{url}/world-countries.json'
+    folium.Choropleth(geo_data=country_shapes, min_zoom=2, name='COVID-19', data=covid2, columns=['Country', 'TotalConfirmed'], key_on='feature.properties.name', fill_color='OrRd',    nan_fill_color='black',  legend_name='Total Confirmed Covid Cases',).add_to(m)
+
+    covid2.update(covid2['TotalConfirmed'].map('Total Confirmed:{}'.format))
+    covid2.update(covid2['TotalRecovered'].map('Total Recovered:{}'.format))
+    coordinates = pd.read_csv('C:/Users/DELL/Documents/Folder1/countries-csv.csv')
+    covid_final= pd.merge(covid2,coordinates,on='Country')
+
+    def plotDot(point):
+        folium.CircleMarker(location=[point.latitude, point.longitude],radius=5,weight=2,popup = [point.Country,point.TotalConfirmed,point.TotalRecovered],fill_color='#000000').add_to(m)
+    covid_final.apply(plotDot, axis = 1)
+    m.fit_bounds(m.get_bounds())
+    m.save("covid_map_1.html")
+    webbrowser.open("covid_map_1.html")
+
+```
+
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/COVID%20MAP%201.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -249,5 +283,17 @@ from folium.plugins import HeatMap
 > 
 > **The created Folium map is saved as HTML file. This HTML file is opened using webbrowser.open() method.**
 
+#### Top 10 Cases Countries
 
+<p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20Countries.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Death%20Cases%20Countries.png" width="45%">
+</p>
+<p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Recovered%20Cases%20Countries.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Active%20Cases%20Countries.png" width="45%">
+</p>
 
+##### Countywise Code - [CountryWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/countrywise.py)
