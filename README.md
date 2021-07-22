@@ -21,15 +21,20 @@
     - [Indiacases.py](#code---indiacasespy)
   - [State Wise](#state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
-    - [State Wise Visualization - Graph](#state-wise-graph)
-    - [District Wise Visualization - Graph](#district-wise-graph)
-    - [Top 10 Cases States](#top-10-cases-states)
+    - [State Wise Visualization - Graph](#state-wise-visualization---graph)
+    - [District Wise Visualization - Graph](#district-wise-visualization---graph)
+    - [Top 10 States Visualization](#top-10-cases-states)
     - [StateWise.py](#statewise-code---statewisepy)
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
     - [World Cases Visualization Using Folium Maps](#world-cases-maps)
-    - [Top 10 Cases Countries](#top-10-cases-countries)
+    - [Top 10 Countries Visualization](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
+  - [Health Info](#country-wise)
+    - [Symptoms](#)
+    - [Precautions](#)
+    - [Treatments](#)
+    - [Vaccination](#)
 
 ## Prerequisites
 
@@ -294,16 +299,19 @@ def confirmed_cases_countries():
     fig1 = px.scatter(top10_confirmed, x = top10_confirmed.index, y = 'Confirmed', size = 'Confirmed', size_max = 120,
             color = top10_confirmed.index, title = 'Top 10 Confirmed Cases Countries')
     fig1.show()
+    
 def confirmed_deaths_countries():
     top10_deaths = pd.DataFrame(data.groupby('Country')['Deaths'].sum().nlargest(10).sort_values(ascending = True))
     fig2 = px.bar(top10_deaths, x = 'Deaths', y = top10_deaths.index, height = 600, color = 'Deaths', orientation = 'h',
         color_continuous_scale = ['deepskyblue','red'], title = 'Top 10 Death Cases Countries')
     fig2.show()
+    
 def confirmed_recovered_countries():
     top10_recovered = pd.DataFrame(data.groupby('Country')['Recovered'].sum().nlargest(10).sort_values(ascending = False))
     fig3 = px.bar(top10_recovered, x = top10_recovered.index, y = 'Recovered', height = 600, color = 'Recovered',
          title = 'Top 10 Recovered Cases Countries', color_continuous_scale = px.colors.sequential.Viridis)
     fig3.show()
+    
 def confirmed_active_countries():
     top10_active = pd.DataFrame(data.groupby('Country')['Active'].sum().nlargest(10).sort_values(ascending = True))
     fig4 = px.bar(top10_active, x = 'Active', y = top10_active.index, height = 600, color = 'Active', orientation = 'h',
