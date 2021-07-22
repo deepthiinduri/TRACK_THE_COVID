@@ -19,18 +19,18 @@
     - [Main.py](#main-code---mainpy)
     - [Requesting Web Page and Pulling data](#make-a-request-to-a-web-page-and-pulling-data-out-of-file-using-requests-and-beautifulsoup-modules)
     - [Indiacases.py](#code---indiacasespy)
-  - [State Wise](#state-wise-india)
+  - [State Wise](#-state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
     - [State Wise Visualization - Graph](#state-wise-visualization---graph)
     - [District Wise Visualization - Graph](#district-wise-visualization---graph)
     - [Top 10 States Visualization](#top-10-cases-states)
     - [StateWise.py](#statewise-code---statewisepy)
-  - [Country Wise](#country-wise)
+  - [Country Wise](#-country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
     - [World Cases Visualization Using Folium Maps](#world-cases-maps)
     - [Top 10 Countries Visualization](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
-  - [Health Info](#)
+  - [Health Info](#health-info)
     - [Symptoms](#)
     - [Precautions](#)
     - [Treatments](#)
@@ -333,6 +333,6 @@ def confirmed_active_countries():
 ##### Countrywise Code - [CountryWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/countrywise.py)
 
 
-### Health Info
+### 🤒 Health Info
 
 ####
