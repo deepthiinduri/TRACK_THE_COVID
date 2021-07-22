@@ -30,7 +30,7 @@
     - [World Cases Visualization Using Folium Maps](#world-cases-maps)
     - [Top 10 Countries Visualization](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
-  - [Health Info](#country-wise)
+  - [Health Info](#)
     - [Symptoms](#)
     - [Precautions](#)
     - [Treatments](#)
@@ -105,8 +105,7 @@ bs = bs4.BeautifulSoup(html_data.text,'html.parser')
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Home%20Page.png">
 
 
-### State Wise (India)
-
+### 👩‍👧 State Wise (India)
 #### Importing covid and covid_india Modules
 
 ```python
@@ -218,7 +217,7 @@ def top10_confirmed_states():
 ##### Statewise Code - [StateWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/statewise.py)
 
 
-### Country Wise
+### 👩‍👩‍👧‍👧 Country Wise
 
 #### Importing pycountry and folium modules
 
@@ -332,3 +331,8 @@ def confirmed_active_countries():
 </p>
 
 ##### Countrywise Code - [CountryWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/countrywise.py)
+
+
+### Health Info
+
+####
