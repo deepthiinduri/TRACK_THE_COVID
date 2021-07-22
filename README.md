@@ -21,13 +21,13 @@
     - [Indiacases.py](#code---indiacasespy)
   - [State Wise](#state-wise-india)
     - [Importing Covid and Coivd_India Modules](#importing-covid-and-covid_india-modules)
-    - [State Wise Graph](#state-wise-graph)
-    - [District Wise Graph](#district-wise-graph)
+    - [State Wise Visualization - Graph](#state-wise-graph)
+    - [District Wise Visualization - Graph](#district-wise-graph)
     - [Top 10 Cases States](#top-10-cases-states)
     - [StateWise.py](#statewise-code---statewisepy)
   - [Country Wise](#country-wise)
     - [Importing Modules](#importing-pycountry-and-folium-modules)
-    - [World Cases Total and Active Cases](#world-cases-maps)
+    - [World Cases Visualization Using Folium Maps](#world-cases-maps)
     - [Top 10 Cases Countries](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
 
@@ -102,7 +102,7 @@ bs = bs4.BeautifulSoup(html_data.text,'html.parser')
 
 ### State Wise (India)
 
-#### Importing covid and covid_india modules
+#### Importing covid and covid_india Modules
 
 ```python
 
@@ -128,7 +128,7 @@ df = pd.DataFrame(statewise)
 
 <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/State%20Wise.png">
 
-#### State wise graph
+#### State Wise Visualization - Graph
 
 All the plotly graphs are displayed in the default web browser.
 
@@ -146,7 +146,7 @@ def get_state_info_graph():
     fig.show()
 
 ```
-#### District wise graph
+#### District Wise Visualization - Graph
 
 ```python
 
@@ -285,6 +285,33 @@ def map_world():
 
 #### Top 10 Cases Countries
 
+Code for Top 10 Countries(Confirmed, Deaths, Recovered, Active)
+
+```python
+
+def confirmed_cases_countries():
+    top10_confirmed = pd.DataFrame(data.groupby('Country')['Confirmed'].sum().nlargest(10).sort_values(ascending = False))
+    fig1 = px.scatter(top10_confirmed, x = top10_confirmed.index, y = 'Confirmed', size = 'Confirmed', size_max = 120,
+            color = top10_confirmed.index, title = 'Top 10 Confirmed Cases Countries')
+    fig1.show()
+def confirmed_deaths_countries():
+    top10_deaths = pd.DataFrame(data.groupby('Country')['Deaths'].sum().nlargest(10).sort_values(ascending = True))
+    fig2 = px.bar(top10_deaths, x = 'Deaths', y = top10_deaths.index, height = 600, color = 'Deaths', orientation = 'h',
+        color_continuous_scale = ['deepskyblue','red'], title = 'Top 10 Death Cases Countries')
+    fig2.show()
+def confirmed_recovered_countries():
+    top10_recovered = pd.DataFrame(data.groupby('Country')['Recovered'].sum().nlargest(10).sort_values(ascending = False))
+    fig3 = px.bar(top10_recovered, x = top10_recovered.index, y = 'Recovered', height = 600, color = 'Recovered',
+         title = 'Top 10 Recovered Cases Countries', color_continuous_scale = px.colors.sequential.Viridis)
+    fig3.show()
+def confirmed_active_countries():
+    top10_active = pd.DataFrame(data.groupby('Country')['Active'].sum().nlargest(10).sort_values(ascending = True))
+    fig4 = px.bar(top10_active, x = 'Active', y = top10_active.index, height = 600, color = 'Active', orientation = 'h',
+         color_continuous_scale = ['paleturquoise','blue'], title = 'Top 10 Active Cases Countries')
+    fig4.show()
+
+```
+
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Confirmed%20Cases%20Countries.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -296,4 +323,4 @@ def map_world():
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Top%2010%20Active%20Cases%20Countries.png" width="45%">
 </p>
 
-##### Countywise Code - [CountryWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/countrywise.py)
+##### Countrywise Code - [CountryWise.py](https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/countrywise.py)
