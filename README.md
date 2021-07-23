@@ -335,4 +335,4 @@ def confirmed_active_countries():
 
 ### 🤒 Health Info
 
-####
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png">
