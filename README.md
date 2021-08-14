@@ -54,16 +54,16 @@ Inorder to get this project working on system. We need to install the following:
 ### Important Links
 
 Data is collected from different sources-
-•	https://www.mohfw.gov.in/
-•	https://api.covid19india.org/data.json
-•	https://api.covid19india.org/state_district_wise.json
-•	https://api.covid19api.com/summary
-•	https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json
-•	https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json
-•	https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv
-•	https://covid19.trackvaccines.org/
-•	https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}
-•	https://www.who.int/
+1.  https://www.mohfw.gov.in/
+2.	https://api.covid19india.org/data.json
+3.	https://api.covid19india.org/state_district_wise.json
+4.	https://api.covid19api.com/summary
+5.	https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json
+6.	https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/Coronavirus_2019_nCoV_Cases/FeatureServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=json
+7.  https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv
+8.	https://covid19.trackvaccines.org/
+9.	https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}
+10.	https://www.who.int/
 
 
 
