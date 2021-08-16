@@ -353,9 +353,11 @@ def confirmed_active_countries():
 <p>
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" width=300>
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Symptoms%20page.png" width="45%" align = "right">
+  <h3> HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinations all around the world and availale vaccination centers in India for the next 10 days. </h3>
 </p>
 <p align="center">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Symptoms%20page.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Treatments%20page.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Precautions%20page.png" width="45%">
