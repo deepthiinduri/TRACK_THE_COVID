@@ -366,7 +366,7 @@ HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinatio
 
 Check Your Nearest Vaccination Center And Slots Availability (Search by PIN)
 
-<p>
+<p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Page.png" align="left" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Types%20Page.png" width="45%">
