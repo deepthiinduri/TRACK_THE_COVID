@@ -363,3 +363,9 @@ def confirmed_active_countries():
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Precautions%20page.png" width="45%">
 </p>
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" align="left" width="300px"/>
+some text floating around the image
+
+<br clear="left"/>
+
+A "newline". This text doesn't float anymore, is left-aligned.
