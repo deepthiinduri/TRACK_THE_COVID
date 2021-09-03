@@ -351,8 +351,10 @@ def confirmed_active_countries():
 
 ### 🤒 Health Info
 <p>
-  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" width=300 float=left>
-  HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinations all around the world and available vaccination centers in India for the next 10 days. 
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" width=280 float=left>
+  <span>
+    HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinations all around the world and available vaccination centers in India for the next 10 days.
+  </span>
 </p>
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Symptoms%20page.png" width="45%">
