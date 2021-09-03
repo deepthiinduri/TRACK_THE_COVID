@@ -366,8 +366,58 @@ HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinatio
 
 Check Your Nearest Vaccination Center And Slots Availability (Search by PIN)
 
+```python
+def vaccine_availability_search():
+            MessageBox = ctypes.windll.user32.MessageBoxW
+            if(txt3.get()=='' or txt1.get()=='' or txt2.get()==''):
+                MessageBox(None, ' Please enter all the fields. ', ' Alert! ', 0)
+                return
+            elif(int(txt3.get())>10):
+                MessageBox(None, ' Please enter data for a period of up to ten days. ', ' Alert! ', 0)
+                return
+            numdays = int(txt3.get())
+            POST_CODE = int(txt1.get())
+            age = int(txt2.get())
+            base = datetime.datetime.today()
+            date_list = [base + datetime.timedelta(days = x) for x in range(numdays)]
+            date_str = [x.strftime("%d-%m-%Y") for x in date_list]
+            print_flag = 'Y'
+            vaccout = ""
+            for INP_DATE in date_str:
+                url_vaccine = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}".format(POST_CODE, INP_DATE)
+                headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                result = requests.get(url_vaccine, headers = headers)
+                response = result.content.decode()
+                resp_json = json.loads(response)
+                flag = False
+                if resp_json["centers"]:
+                    vaccout = vaccout + "Slots on " + str(INP_DATE) + " : " + "\n"
+                    if(print_flag=='y' or print_flag=='Y'):
+                        for center in resp_json["centers"]:
+                            for session in center["sessions"]:
+                                if session["min_age_limit"] <= age:
+                                    vaccout = vaccout + "\t center_id: " +  str(center["center_id"]) + "\n"
+                                    vaccout = vaccout + "\t Name: " +  center["name"] + "\n"
+                                    vaccout = vaccout + "\t Address: " +  center["address"] + "\n"
+                                    vaccout = vaccout + "\t block_name: " +  center["block_name"] + "\n"
+                                    vaccout = vaccout + "\t from: " +  center["from"] + "\n"
+                                    vaccout = vaccout + "\t to: " +  center["to"] + "\n"
+                                    vaccout = vaccout + "\t Price: " +  center["fee_type"] + "\n"
+                                    vaccout = vaccout + "\t Available Capacity: " +  str(session["available_capacity"]) + "\n"
+                                    if(session["vaccine"] != ''):
+                                        vaccout = vaccout + "\t Date: " + str(session["date"]) + "\n"
+                                        vaccout = vaccout + "\t Vaccine: " + str(session["vaccine"]) + "\n"
+                                        vaccout = vaccout + "\t Slots: " + str(session["slots"]) + "\n"
+                                    vaccout = vaccout + "\n\n"
+                                else:
+                                    vaccout = vaccout + "\t No Vaccination slots Available below " + str(session["min_age_limit"]) + "\n\n"
+                                    break
+                else:
+                    vaccout = vaccout + "\t No available slots on " + str(INP_DATE) + "\n\n"
+```
+
 <p align="center">
-  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Page.png" align="left" width="45%">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Page.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Types%20Page.png" width="45%">
 </p>
