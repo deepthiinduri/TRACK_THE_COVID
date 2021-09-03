@@ -35,7 +35,7 @@
     - [Symptoms](#-health-info)
     - [Precautions](#-health-info)
     - [Treatments](#-health-info)
-    - [Vaccination](#)
+    - [Vaccination](#check-your-nearest-vaccination-center-and-slots-availability-search-by-pin)
 
 ## Prerequisites
 
