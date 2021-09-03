@@ -350,12 +350,10 @@ def confirmed_active_countries():
 
 
 ### 🤒 Health Info
-<p>
-  <span float = right>
-    HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinations all around the world and available vaccination centers in India for the next 10 days.
-  </span>
-  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" width=280 float = left>
-</p>
+
+<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" align="left" width="300px"/>
+HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinations all around the world and available vaccination centers in India for the next 10 days.
+
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Symptoms%20page.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -363,9 +361,4 @@ def confirmed_active_countries():
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Precautions%20page.png" width="45%">
 </p>
-<img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Health%20Info.png" align="left" width="300px"/>
-some text floating around the image
 
-<br clear="left"/>
-
-A "newline". This text doesn't float anymore, is left-aligned.
