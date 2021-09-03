@@ -32,9 +32,9 @@
     - [Top 10 Countries Visualization](#top-10-cases-countries)
     - [CountryWise.py](#countrywise-code---countrywisepy)
   - [Health Info](#-health-info)
-    - [Symptoms](#)
-    - [Precautions](#)
-    - [Treatments](#)
+    - [Symptoms](#-health-info)
+    - [Precautions](#-health-info)
+    - [Treatments](#-health-info)
     - [Vaccination](#)
 
 ## Prerequisites
@@ -364,7 +364,7 @@ HealthInfo contains Symptoms, Treatments, Precautions of Covid-19 and Vaccinatio
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Precautions%20page.png" width="45%">
 </p>
 
-Check Your Nearest Vaccination Center And Slots Availability (Search by PIN)
+#### Check Your Nearest Vaccination Center And Slots Availability (Search by PIN)
 
 ```python
 def vaccine_availability_search():
