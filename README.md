@@ -424,5 +424,5 @@ def vaccine_availability_search():
 <p align="center">
   <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccination%20Centers%20Availability%20Check%20Page.png" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Vaccinations%20Types%20Page.png" width="45%">
+  <img src="https://github.com/deepthiinduri/TRACK_THE_COVID/blob/main/TRACK_THE_COVID/Countries%20with%20People%20Vaccinated%20Page.png" width="45%">
 </p>
